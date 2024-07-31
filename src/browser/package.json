@@ -6,9 +6,9 @@
   },
   "private": true,
   "scripts": {
-    "start": "npm-run-all -p start:testServer start:en",
-    "start:en": "ng serve --hmr -c dev -o",
-    "start:zh": "ng serve --hmr -c devCn -o",
+    "start": "npm-run-all -p start:testServer start:zh",
+    "start:en": "ng serve --hmr -c dev -o --disable-host-check --host 0.0.0.0",
+    "start:zh": "ng serve --hmr -c devCn -o --disable-host-check --host 0.0.0.0",
     "start:direct": "ng serve --hmr -c dev",
     "serve": "ng serve --hmr -c dev -o --host 0.0.0.0",
     "start:testServer": "yarn workspace postcat-test-server run dev",
