@@ -83,7 +83,7 @@ export class WebsocketComponent implements OnInit, OnDestroy, EditTabViewCompone
     // * 通过 SocketIO 通知后端
     try {
       const port = this.electron.isElectron ? await window.electron?.getWebsocketPort?.() : 13928;
-      const url = !APP_CONFIG.production || this.electron.isElectron ? `ws://localhost:${port}` : APP_CONFIG.REMOTE_SOCKET_URL;
+      const url = !APP_CONFIG.production || this.electron.isElectron ? `ws://${window.location.hostname}:${port}` : APP_CONFIG.REMOTE_SOCKET_URL;
       this.socket = io(url, { path: '/socket.io', transports: ['websocket'], reconnectionAttempts: 2 });
       this.socket.on('connect_error', error => {
         // * conncet socketIO is failed

@@ -16,7 +16,7 @@ export class SocketService {
       let url = '';
       if (!APP_CONFIG.production || this.electron.isElectron) {
         const port = this.electron.isElectron ? await window.electron?.getWebsocketPort?.() : 13928;
-        url = `ws://localhost:${port}`;
+        url = `ws://${window.location.hostname}:${port}`;
       } else {
         url = APP_CONFIG.REMOTE_SOCKET_URL;
       }

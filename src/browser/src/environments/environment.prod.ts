@@ -5,6 +5,6 @@ export const APP_CONFIG = {
   production: true,
   environment: 'PROD',
   ...COMMON_CONFIG,
-  REMOTE_SOCKET_URL: '',
-  NODE_SERVER_PORT: ''
+  REMOTE_SOCKET_URL: ':13928',
+  NODE_SERVER_PORT: 4201
 };
