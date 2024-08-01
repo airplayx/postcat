@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="zh-CN">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="zh">
     <body>
       <trans-unit id="335245043140376962" datatype="html">
         <source>Power by <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [href]=&quot;powerBy.link&quot; target=&quot;_blank&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{ powerBy.title }}"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
