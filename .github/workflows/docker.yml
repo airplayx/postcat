@@ -9,7 +9,7 @@ env:
 
 jobs:
   main:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
           push: true
           # see https://github.com/docker-library/bashbrew/blob/v0.1.1/architecture/oci-platform.go
           platforms: |
-            linux/amd64,linux/arm64/v8
+            linux/amd64
           build-args: |
             APP_NAME=${{ env.APP_NAME }}
             APP_VERSION=${{ env.APP_VERSION }}
