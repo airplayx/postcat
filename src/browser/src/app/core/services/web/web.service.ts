@@ -57,7 +57,7 @@ export class WebService {
     this.isWeb = !this.electronService.isElectron;
     this.githubBugUrl = this.getGithubUrl();
     if (this.isWeb) {
-      this.settingService.putSettings({ 'backend.url': window.location.origin });
+      this.settingService.putSettings({ 'backend.url': APP_CONFIG.serverUrl });
     } else {
       this.settingService.putSettings({ 'backend.url': !APP_CONFIG.production ? window.location.origin : APP_CONFIG.serverUrl });
     }

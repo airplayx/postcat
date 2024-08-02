@@ -123,7 +123,7 @@ class EoBrowserWindow {
     // Create the browser window.
     const opts = {
       useContentSize: true,
-      frame: os.type() === 'Darwin' ? true : false, //mac use default frame
+      frame: os.type() === 'Darwin', //mac use default frame
       minWidth: 400,
       minHeight: 300,
       webPreferences: {
@@ -132,7 +132,7 @@ class EoBrowserWindow {
         nodeIntegration: true,
         //! it must be false because we need run extension in sandbox
         contextIsolation: false,
-        allowRunningInsecureContent: processEnv === 'development' ? true : false
+        allowRunningInsecureContent: processEnv === 'development'
       }
     };
     Object.assign(opts, windowConfig, store.get('winConf'));
